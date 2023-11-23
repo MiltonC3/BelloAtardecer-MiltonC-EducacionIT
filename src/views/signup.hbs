@@ -1,0 +1,16 @@
+{{> navUser}}
+
+<main class="main__user">
+    <section class="user__section signup__section">
+        <h2 class="user__h2">Crear Cuenta</h2>
+        <form class="user__form" action="/register" method="post">
+            <input type="text" name="nombre" class="user__input" placeholder="Nombre y Apellido" required>
+            <input type="email" name="email" class="user__input" placeholder="Correo eletrónico" required>
+            <input type="password" name="password" class="user__input" placeholder="Contraseña" required> 
+            <button class="register__btn" type="submit">Continuar</button>
+        </form>
+        <a class="user__link--btn" href="/signin">
+            <button class="login__btn btn-link" type="submit">Iniciar Sesión</button>
+        </a>
+    </section>
+</main>

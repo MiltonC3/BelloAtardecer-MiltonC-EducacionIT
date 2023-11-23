@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    font-family: Roboto;
+}
+
+/* *************LOGIN - SIGNUP */
+.header__user {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 3.5rem;
+    padding: 1rem;
+    align-items: center;
+    flex-shrink: 0;
+    position: fixed;
+}
+.header__user--a {
+    color: #eaeaea;
+    text-decoration: none;
+}
+.header__user--a img {
+    width: 2.5rem;
+}
+.mobileNav {
+    height: 80px;
+}
+.mobileNav__logo {
+    width: 50px;
+}
+
+.offcanvas.offcanvas-end {
+    width: 250px !important;
+}
+
+.desktopNav {
+    display: none;
+}
+
+.user__logo {
+    width: 300px;
+    position: relative;
+    top: 2rem;
+}
+.main__user {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background: url(/img/bg-user.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.user__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.681);
+    box-shadow: 4px 10px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.login__section {
+    width: 280px;
+    height: 385px;
+}
+.signup__section {
+    width: 300px;
+    height: 450px;
+}
+.user__h2 {
+    color: #bad0d9;
+    margin-top: 2rem;
+    font-size: 28px;
+    font-weight: 700;
+}
+.user__form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user__form a {
+    align-self: flex-start;
+    position: relative;
+    left: 1rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: #e7e7e7;
+    font-size: 12px;
+    font-weight: 300;
+}
+.user__input {
+    width: 200px;
+    margin-top: 1rem;
+    height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #c1c1c1;
+    background-color: #00000000;
+    outline: none;
+    color: #fff;
+}
+.user__input:focus {
+    border: 1px solid #ffffff;
+}
+.user__input::placeholder {
+    color: #e7e7e7;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 13px;
+}
+.user__a--register {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+}
+.user__link--btn {
+    text-decoration: none;
+}
+.login__btn {
+    margin-top: 2rem;
+    width: 200px;
+    height: 45px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #8aa8b4;
+    background: #8aa8b4;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+.register__btn {
+    margin-top: 2rem;
+    width: 200px;
+    height: 45px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #8c6c5a;
+    background: #8c6c5a;
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+.btn-link {
+    background: #00000000;
+    text-decoration: none;
+}
+.btn-link:hover {
+    color: #ffffff;
+}
+/* ***************** CLIENT **************** */
+
+.client__banner {
+    height: 225px;
+    width: 100%;
+    background: url(/img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.client__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.reservar__p {
+    margin: auto;
+    width: 80%;
+    text-align: justify;
+    color: #dfdfdf;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.client__servicios {
+    width: 100%;
+}
+.client__servicios--banner {
+    height: 225px;
+    width: 100%;
+    background: url(/img/banner-servicios.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    /* *************LOGIN - SIGNUP */
+    .header__user {
+        height: 5rem;
+    }
+    .header__user--a img {
+        width: 3.5rem;
+    }
+
+    .desktopNav {
+        display: flex;
+        color: white !important;
+        height: 90px;
+    }
+    .navbar-expand-md .navbar-nav {
+        position: relative!important;
+        top: 5px!important;
+    }
+    .navDesktop__logo {
+        width: 50px;
+    }
+
+    .mobileNav {
+        display: none;
+    }
+
+    /****************************************** DESKTOP ********************************************/
+
+    .user__logo {
+        width: 22rem;
+        top: 2.5rem;
+    }
+    .user__input {
+        width: 250px;
+        height: 50px;
+    }
+    .user__h2 {
+        font-size: 30px;
+    }
+    .login__section {
+        width: 350px;
+        height: 425px;
+    }
+    .signup__section {
+        width: 370px;
+        height: 480px;
+    }
+    .login__btn {
+        width: 250px;
+        height: 50px;
+    }
+    .register__btn {
+        width: 250px;
+        height: 50px;
+    }
+
+    /* ***************** CLIENT **************** */
+    
+    .client__banner {
+        height: 500px;
+    }
+    .client__servicios--banner {
+        height: 500px;
+    }
+}
+
+@media(min-width: 992px) {
+    .navbar-expand-md .navbar-nav {
+        position: relative!important;
+        top: 0px!important;
+    }
+}

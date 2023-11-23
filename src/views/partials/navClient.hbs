@@ -1,0 +1,129 @@
+<header>
+    <nav class='desktopNav navbar navbar-expand-md bg-dark fixed-top'>
+        <div class='container-fluid'>
+            <a class='navbar-brand' href='/user/client'><img class="navDesktop__logo" src="/icon/logo-corto.svg" alt=""></a>
+            <button
+                class='navbar-toggler'
+                type='button'
+                data-bs-toggle='collapse'
+                data-bs-target='#navbarSupportedContent'
+                aria-controls='navbarSupportedContent'
+                aria-expanded='false'
+                aria-label='Toggle navigation'
+            >
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+                <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+                    <li class='nav-item'>
+                        <a class='nav-link active text-light' aria-current='page' href='/user/client'>Inicio</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link text-light' href='/user/client'>Reservar</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link text-light' href='/user/client'>Servicios</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link text-light' href='/user/client'>Contacto</a>
+                    </li>
+                    <li class='nav-item dropdown bg-dark'>
+                        <a
+                            class='nav-link dropdown-toggle text-light'
+                            href='#'
+                            role='button'
+                            data-bs-toggle='dropdown'
+                            aria-expanded='false'
+                        >
+                            Mi Cuenta {{ nombre }}
+                        </a>
+                        <ul class='dropdown-menu bg-dark'>
+                            <li><a class='dropdown-item bg-dark text-light' href='/user/client/cuenta'>Mis Datos</a></li>
+                            <hr class='dropdown-divider' /></li>
+                            <li><a class='dropdown-item bg-dark text-light' href='/user/client/cuenta'>Mis Reservas</a></li>
+                            <li><hr class='dropdown-divider' /></li>
+                            <li><a class='dropdown-item bg-dark text-light' href='/user/client/cuenta'>Mis Consultas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class='mobileNav navbar navbar-dark bg-dark fixed-top'>
+        <div class='container-fluid'>
+            <a class='navbar-brand' href='/user/client'><img
+                    class='mobileNav__logo'
+                    src='/icon/logo-corto.svg'
+                    alt='logo'
+                /></a>
+            <button
+                class='navbar-toggler'
+                type='button'
+                data-bs-toggle='offcanvas'
+                data-bs-target='#offcanvasDarkNavbar'
+                aria-controls='offcanvasDarkNavbar'
+                aria-label='Toggle navigation'
+            >
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div
+                class='offcanvas offcanvas-end text-bg-dark'
+                tabindex='-1'
+                id='offcanvasDarkNavbar'
+                aria-labelledby='offcanvasDarkNavbarLabel'
+            >
+                <div class='offcanvas-header'>
+                    <button
+                        type='button'
+                        class='btn-close btn-close-white'
+                        data-bs-dismiss='offcanvas'
+                        aria-label='Close'
+                    ></button>
+                </div>
+                <div class='offcanvas-body'>
+                    <ul class='navbar-nav justify-content-end flex-grow-1 pe-3'>
+                        <li class='nav-item'>
+                            <a
+                                class='nav-link active'
+                                aria-current='page'
+                                href='/user/client'
+                            >Inicio</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link active' href='/user/client'>Reservar</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link active' href='/user/client'>Servicios</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link active' href='/user/client'>Contacto</a>
+                        </li>
+                        <li class='nav-item dropdown'>
+                            <a
+                                class='nav-link active dropdown-toggle'
+                                href='#'
+                                role='button'
+                                data-bs-toggle='dropdown'
+                                aria-expanded='false'
+                            >Mi Cuenta
+                            </a>
+                            <ul class='dropdown-menu dropdown-menu-dark'>
+                                <li><a class='dropdown-item' href='/user/client/cuenta'>Mis datos</a></li>
+                                <li>
+                                    <hr class='dropdown-divider' />
+                                </li>
+                                <li><a class='dropdown-item' href='/user/client/cuenta'>Mis
+                                        reservas</a></li>
+                                <li>
+                                    <hr class='dropdown-divider' />
+                                </li>
+                                <li><a class='dropdown-item' href='/user/client/cuenta'>Mis
+                                        consultas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
