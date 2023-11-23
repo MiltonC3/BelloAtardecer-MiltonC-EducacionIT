@@ -1,31 +1,31 @@
-import Users from '../models/userModel.js';
-import { validationResult } from 'express-validator';
-import bcrypt from 'bcrypt';
+const Users = require("../models/userModel");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcrypt");
 
-export const login = (req, res) => {
-    res.render('login');
+const login = (req, res) => {
+    res.render("login");
 };
-export const signup = (req, res) => {
-    res.render('signup');
+const signup = (req, res) => {
+    res.render("signup");
 };
 
-export const userRegister = async (req, res) => {
+const userRegister = async (req, res) => {
     const errores = validationResult(req);
 
     if (!errores.isEmpty()) {
-        console.log('Tenemos un error de validacion');
-        return res.json({ error: 'Tenemos un error' });
+        console.log("Tenemos un error de validacion");
+        return res.json({ error: "Tenemos un error" });
     }
 
     const { nombre, email, password } = req.body;
 
-    console.log(nombre, email)
+    console.log(nombre, email);
 
     try {
         let usuarioNuevo = await Users.findOne({ email });
-        console.log(usuarioNuevo)
+        console.log(usuarioNuevo);
         if (usuarioNuevo) {
-            return res.render('error', {
+            return res.render("error", {
                 mensajeErrorUser,
             });
         }
@@ -39,12 +39,12 @@ export const userRegister = async (req, res) => {
 
         await usuarioNuevo.save();
 
-        return res.render('login');
+        return res.render("login");
     } catch (error) {
-        return res.json({error: error.message});
+        return res.json({ error: error.message });
     }
 };
-export const userLogin = async (req, res) => {
+const userLogin = async (req, res) => {
     const { email, password } = req.body;
 
     console.log(`Los datos son: ${email}, ${password}`);
@@ -54,8 +54,8 @@ export const userLogin = async (req, res) => {
 
     //Si hay errores
     if (!errores.isEmpty()) {
-        console.log('Tenemos un error de validación');
-        return res.json({ error: 'tenemos un error de validación' });
+        console.log("Tenemos un error de validación");
+        return res.json({ error: "tenemos un error de validación" });
     }
 
     try {
@@ -64,7 +64,7 @@ export const userLogin = async (req, res) => {
         console.log(`Usuario encontrado: ${usuarioLogin}`);
 
         if (!usuarioLogin) {
-            return res.render('signup');
+            return res.render("signup");
         }
 
         const validacionPass = bcrypt.compareSync(
@@ -75,9 +75,16 @@ export const userLogin = async (req, res) => {
         console.log(`Validación es: ${validacionPass}`);
 
         if (validacionPass) {
-            return res.redirect('/user/client');
+            return res.redirect("/user/client");
         }
     } catch {
-        return res.json({ error: 'error en la db' });
+        return res.json({ error: "error en la db" });
     }
+};
+
+module.exports = {
+    login,
+    signup,
+    userRegister,
+    userLogin,
 };

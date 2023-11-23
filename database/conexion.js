@@ -1,6 +1,5 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config()
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 const MONGOLOCAL = process.env.MONGO_URL_LOCAL;
 const MONGOATLAS = process.env.MONGO_URL_ATLAS;
@@ -11,8 +10,8 @@ const conexion = mongoose
         useUnifiedTopology: true,
     })
     .then(() => {
-        console.log('Conexion a la base de datos establecida con exito');
+        console.log("Conexion a la base de datos establecida con exito");
     })
     .catch((err) => console.log(err));
 
-export default conexion
+module.exports = conexion;

@@ -1,30 +1,30 @@
-import { Router } from 'express';
+const { Router } = require("express");
 const router = Router();
+const { check } = require("express-validator");
+const {
+    login,
+    signup,
+    userRegister,
+    userLogin,
+} = require("../controllers/userController");
 
-import { check } from 'express-validator';
-import { login, signup, userRegister, userLogin } from '../controllers/userController.js';
-
-router.get('/signin', login);
-router.get('/signup', signup);
+router.get("/signin", login);
+router.get("/signup", signup);
 
 router.post(
-    '/register',
+    "/register",
     [
-        check('nombre').isLength({ min: 4 }),
-        check('email').isEmail(),
-        check('password').isLength({ min: 6, max: 10 }),
+        check("nombre").isLength({ min: 4 }),
+        check("email").isEmail(),
+        check("password").isLength({ min: 6, max: 10 }),
     ],
     userRegister
 );
 
 router.post(
-    '/signin'
-    ,
-    [
-        check('email').isEmail(),
-        check('password').isLength({min:8})
-    ]
-    , userLogin
+    "/signin",
+    [check("email").isEmail(), check("password").isLength({ min: 8 })],
+    userLogin
 );
 
-export default router;
+module.exports = router;

@@ -1,11 +1,23 @@
-{{> navUser }}
+{{> navUser}}
 
 <main class="main__user">
     <section class="user__section login__section">
         <h2 class="user__h2">Iniciar Sesión</h2>
         <form class="user__form" action="signin" method="post">
-            <input type="email" name="email" class="user__input" placeholder="Correo eletrónico" required>
-            <input type="password" name="password" class="user__input" placeholder="Contraseña" required> 
+            <input
+                type="email"
+                name="email"
+                class="user__input"
+                placeholder="Correo eletrónico"
+                required
+            />
+            <input
+                type="password"
+                name="password"
+                class="user__input"
+                placeholder="Contraseña"
+                required
+            />
             <button class="login__btn" type="submit">Ingresar</button>
         </form>
         <a class="user__link--btn" href="/signup">

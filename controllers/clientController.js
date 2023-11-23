@@ -1,6 +1,11 @@
-export const client = (req, res) => {
-  res.render('client');
+const client = (req, res) => {
+    res.render("client");
 };
-export const clientCuenta = (req, res) => {
-    res.render('clientCuenta');
+const clientCuenta = (req, res) => {
+    res.render("clientCuenta");
+};
+
+module.exports = {
+    client,
+    clientCuenta,
 };

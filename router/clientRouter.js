@@ -1,12 +1,9 @@
-import { Router } from 'express';
+const { Router } = require("express");
 const router = Router();
 
-// import { check } from 'express-validator';
-import { 
-    client,
-    clientCuenta } from '../controllers/clientController.js';
+const { client, clientCuenta } = require("../controllers/clientController");
 
-router.get('/client', client)
-router.get('/client/cuenta', clientCuenta)
+router.get("/client", client);
+router.get("/client/cuenta", clientCuenta);
 
-export default router
+module.exports = router;

@@ -1,9 +1,8 @@
-import { Router } from 'express';
+const { Router } = require("express");
 const router = Router();
 
-// import { check } from 'express-validator';
-import { admin } from '../controllers/adminController.js';
+const { admin } = require("../controllers/adminController");
 
-router.get('/admin', admin);
+router.get("/admin", admin);
 
-export default router;
+module.exports = router;

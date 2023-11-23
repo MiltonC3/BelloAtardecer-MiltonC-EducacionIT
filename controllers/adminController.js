@@ -1,3 +1,7 @@
-export const admin = (req, res) => {
-    res.render('admin');
+const admin = (req, res) => {
+    res.render("admin");
+};
+
+module.exports = {
+    admin,
 };
